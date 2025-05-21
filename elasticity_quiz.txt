@@ -1,0 +1,17 @@
+Q1: If the price increases by 10% and quantity demanded decreases by 20%, what is the price elasticity of demand?
+A. -0.5
+B. -1
+C. -2 ✔️
+D. 2
+
+Q2: ถ้าราคาสินค้าลดลง 10% แล้วปริมาณที่ซื้อเพิ่มขึ้น 5% ความยืดหยุ่นคือเท่าใด?
+ก. -0.5 ✔️
+ข. -2
+ค. 0.5
+ง. 2
+
+Q3: Which type of good is likely to have perfectly inelastic demand?
+A. Luxury car
+B. Toothpaste ✔️
+C. Ice cream
+D. Movie tickets
