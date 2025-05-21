@@ -53,7 +53,7 @@ with col2:
         "D": "2"
     }
 
-    selected = st.radio("เลือกคำตอบของคุณ:", list(options.keys()), index=None)
+    selected = st.radio("เลือกคำตอบของคุณ:", list(options.keys()), index=None, key="quiz1")
 
     if selected:
         if selected == "C":
