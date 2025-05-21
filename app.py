@@ -61,8 +61,3 @@ if selected_label:
     else:
         st.error("❌ ยังไม่ถูก ลองใหม่! เฉลย: C. -2")
 
-    if selected:
-        if selected == "C":
-            st.success("✅ ถูกต้อง! Ed = -2 แสดงว่าอุปสงค์มีความยืดหยุ่น")
-        else:
-            st.error(f"❌ ยังไม่ถูก ลองใหม่! เฉลย: C. -2")
