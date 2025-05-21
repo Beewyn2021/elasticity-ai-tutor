@@ -28,7 +28,7 @@ user_input = st.text_input("อยากรู้อะไรบ้าง (เ�
 
 if user_input:
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a friendly economics tutor who speaks Thai and English."},
             {"role": "user", "content": user_input}
