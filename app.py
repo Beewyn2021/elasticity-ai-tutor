@@ -1,10 +1,9 @@
-
 import streamlit as st
-import openai
+from openai import OpenAI
 import os
 
 # Set your OpenAI key
-openai.api_key = os.environ.get("OPENAI_API_KEY", "your-api-key-here")
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", "your-api-key-here"))
 
 st.set_page_config(page_title="Econ AI Tutor", page_icon="🐧", layout="wide")
 
@@ -28,9 +27,12 @@ st.image("penguin_icon.png", width=80)
 user_input = st.text_input("อยากรู้อะไรบ้าง (เช่น Elasticity คืออะไร?)")
 
 if user_input:
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-4",
-        messages=[{"role": "user", "content": user_input}]
+        messages=[
+            {"role": "system", "content": "You are a friendly economics tutor who speaks Thai and English."},
+            {"role": "user", "content": user_input}
+        ]
     )
     st.success(response.choices[0].message.content)
 
