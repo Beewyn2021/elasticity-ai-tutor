@@ -47,13 +47,19 @@ with col2:
     st.write(question)
 
     options = {
-        "A": "-0.5",
-        "B": "-1",
-        "C": "-2",  # correct
-        "D": "2"
-    }
+    "A. -0.5": "A",
+    "B. -1": "B",
+    "C. -2": "C",  # correct
+    "D. 2": "D"
+}
+selected_label = st.radio("เลือกคำตอบของคุณ:", list(options.keys()), index=None, key="quiz1")
 
-    selected = st.radio("เลือกคำตอบของคุณ:", list(options.keys()), index=None, key="quiz1")
+if selected_label:
+    selected = options[selected_label]
+    if selected == "C":
+        st.success("✅ ถูกต้อง! Ed = -2 แสดงว่าอุปสงค์มีความยืดหยุ่น")
+    else:
+        st.error("❌ ยังไม่ถูก ลองใหม่! เฉลย: C. -2")
 
     if selected:
         if selected == "C":
